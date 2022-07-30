@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Bitter:ital,wght@1,300;1,400&family=Lobster&family=Newsreader:opsz,wght@6..72,200;6..72,400&family=Noto+Serif&family=Rock+Salt&display=swap');
+
+*{
+    box-sizing: border-box;
+}
+
+:root{
+    --primary-color: #393E46;
+    --secondary-color: #00ADB5;
+}
+
+body{
+    background-color: var( --primary-color);
+    font-family: 'Bitter', sans-serif;
+    margin: 0;
+}
+header {
+    padding: 10px;
+    display: flex;
+    justify-content: flex-end;
+    background-color: var(--secondary-color);
+}
+
+.search{
+    background-color: transparent;
+    border: 2px solid var(--primary-color);
+    padding: 10px 10px;
+    border-radius: 50px;
+    font-size: 1rem;
+    color: #EEEEEE;
+    font-family: inherit;
+}
+
+.search:focus{
+    outline: 0;
+    background-color: var(--primary-color);
+    padding: 10px 10px;
+    border-radius: 50px;
+    font-size: 1rem;
+    color:#EEEEEE;
+    font-family: inherit; 
+}
+
+.search:focus::placeholder {
+    color: #EEEEEE;
+}
+
+.search::placeholder {
+    color: #222831;
+}
+main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.movie{
+    width: 200px;
+    margin: 15px;
+    border-radius: 4px;
+    box-shadow: 0.2px 4px 5px rgba(0, 0, 0, 0.2);
+    background-color: var(--secondary-color);
+    position:relative;
+    overflow: hidden;
+}
+.movie img{
+    width: 100%;
+}
+
+.movie-info {
+    color: #EEEEEE;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 10px 10px;
+    letter-spacing: 1px;
+
+}
+
+.movie-info h3{
+    margin-top: 0;
+}
+
+.movie-info span{
+    background-color: var(--primary-color);
+    padding: 10px 10px;
+    border-radius: 3px;
+    font-weight: bold;
+}
+.movie-info span.green{
+    color: rgba(129, 255, 2, 0.842);
+}
+.movie-info span.red{
+    color: rgba(255, 1, 1, 0.753);
+}
+.movie-info span.orange{
+    color: rgba(255, 166, 0, 0.795);
+}
+
+.overview{
+    position:absolute;
+    left:0;
+    right:0;
+    bottom:0;
+    background-color: #EEEEEE;
+    padding: 5px;
+    max-height: 100%;
+    transform: translateY(101%);
+    transition: transform 0.5s ease-in;
+}
+.movie:hover .overview {
+    transform:translateY(0)
+}
